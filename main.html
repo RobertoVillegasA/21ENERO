@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open HTML Page</title>
+    <title>Load HTML Files</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #content { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>Click the button below to open another HTML file:</p>
-    <a href="\qgis2web_2024_12_03-10_51_54_070845\index.html">
-        <button>Open HTML File</button>
-    </a>
+    <h1>Load an HTML File</h1>
+    <button onclick="loadHTML('qgis2web_2024_12_03-10_51_54_070845/index.html')">Load Example HTML</button>
+    <div id="content">Content will load here...</div>
+    <script src="script.js"></script>
 </body>
 </html>
