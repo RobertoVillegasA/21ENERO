@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Load HTML Files</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #content { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
-    </style>
+    <title>Open HTML from Directory</title>
 </head>
 <body>
-    <h1>Load an HTML File</h1>
-    <button onclick="loadHTML('qgis2web_2024_12_03-10_51_54_070845/index.html')">Load Example HTML</button>
-    <div id="content">Content will load here...</div>
-    <script src="script.js"></script>
+    <h1>Open HTML File</h1>
+    <button onclick="openPage('qgis2web_2024_12_03-10_51_54_070845/index.html')">Open Page 1</button>
+
+    <iframe id="contentFrame" src="" style="width:100%; height:500px; border:1px solid black;"></iframe>
+
+    <script>
+        function openPage(filePath) {
+            document.getElementById('contentFrame').src = filePath;
+        }
+    </script>
 </body>
 </html>
